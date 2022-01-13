@@ -1,0 +1,27 @@
+name: ci it.bz.opendatahub.alpinebits.landingpage
+
+on: 
+  push:
+    branches: [development, main]
+    paths:
+      - "!README.md"
+      
+  pull_request:
+    branches: [development, main]
+    paths:
+      - "!README.md"
+
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: clone into repo
+        uses: actions/checkout@v2
+
+      - name: test
+        run: cd src && test -f index.html
