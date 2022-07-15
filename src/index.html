@@ -9,6 +9,22 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="cookieconsent/cookieconsent.css">
+    <!-- Matomo -->
+    <script type="text/plain" data-cookiecategory="targeting">
+        var _paq = window._paq = window._paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="https://digital.matomo.cloud/";
+            _paq.push(['setTrackerUrl', u+'matomo.php']);
+            _paq.push(['setSiteId', '17']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.async=true; g.src='//cdn.matomo.cloud/digital.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+        })();
+    </script>
+    <!-- End Matomo Code -->
 </head>
 
 <body class="h-100 row align-items-center w-75 no-gutters m-auto p-4">
@@ -55,6 +71,8 @@
         Additional/Legal Information
     </div>
 
+    <script defer src="cookieconsent/cookieconsent.js"></script>
+    <script defer src="cookieconsent/cookieconsent-init.js"></script>
 </body>
 
 </html>
