@@ -45,10 +45,14 @@ jobs:
     concurrency: deploy-prod
     env:
       AWS_S3_BUCKET_NAME : 'alpinebits.lp-prod'
+      SCRIPTS_HOST: 'https://scripts.opendatahub.com'
     steps:
       - name: Checkout source code
         uses: actions/checkout@v2
-
+      
+      - name: Change scripts host to prod
+        run: sed -i -e "s%https://scripts.opendatahub.testingmachine.eu%${{env.SCRIPTS_HOST}}%g" index.html
+      
       - name: Sync to S3 bucket
         uses: noi-techpark/github-actions/aws-s3-bucket-sync@v2
         with:
