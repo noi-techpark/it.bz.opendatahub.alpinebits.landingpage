@@ -1,0 +1,8 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: it.bz.opendatahub.alpinebits.landingpage
+Upstream-Contact: NOI Techpark <digital@noi.bz.it>
+Source: https://github.com/noi-techpark/it.bz.opendatahub.alpinebits.landingpage
+
+Files: .github/* infrastructure/* LICENSE src/favicon.ico
+Copyright: (c) NOI Techpark <digital@noi.bz.it>
+License: CC0-1.0
