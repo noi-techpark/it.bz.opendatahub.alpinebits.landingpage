@@ -1,10 +1,10 @@
 # Infrastructure for it.bz.opendatahub.alpinebits.landingpage
 
 The AlpineBits LandingPage
-[alpinebits.opendatahub.bz.it](https://alpinebits.opendatahub.bz.it) consists of
+[alpinebits.opendatahub.com](https://alpinebits.opendatahub.com) consists of
 a S3 bucket on AWS that hosts the static web application. In addition to this,
 we want to redirect also
-[alpinebits.opendatahub.bz.it/AlpineBits](https://alpinebits.opendatahub.bz.it/AlpineBits),
+[alpinebits.opendatahub.com/AlpineBits](https://alpinebits.opendatahub.com/AlpineBits),
 which is the regular API endpoint to the main landing page, if the request
 method is `GET`. All other API calls on that endpoint are `POST` requests.
 
@@ -13,15 +13,15 @@ method is `GET`. All other API calls on that endpoint are `POST` requests.
 ### Production Environment
 #### Web frontend
 - S3 Bucket to host the static webpage `alpinebits.lp-prod`
-- URL = https://alpinebits.opendatahub.bz.it
+- URL = https://alpinebits.opendatahub.com
 - ALIASES = N/A
-- The domain (managed by TT Digital) points to proxy.opendatahub.bz.it, which redirects it to the S3 bucket
+- The domain (managed by TT Digital) points to proxy.opendatahub.com, which redirects it to the S3 bucket
 
 ### Testing Environment
 #### Web frontend
 - S3 Bucket to host the static webpage `alpinebits.lp-test`
 - URL = https://alpinebits.opendatahub.testingmachine.eu
-- The domain (managed by TT Digital) points to proxy.opendatahub.bz.it, which redirects it to the S3 bucket
+- The domain (managed by TT Digital) points to proxy.opendatahub.com, which redirects it to the S3 bucket
 
 ## External resources
 None at the moment.
